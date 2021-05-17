@@ -1140,3 +1140,24 @@
 	   ✔️  2021/5/17 7:41:56
 
 }
+{
+	  level ⛔  ERROR
+	  message ⛔  {"name":"MongoNetworkError"}
+	   ✔️  "d317d8e4-3f9b-448f-aa00-9b83ee8838bd"
+	   ✔️  2021/5/17 15:12:53
+
+}
+{
+	  level ⛔  ERROR
+	  message ⛔  {"name":"MongoNetworkError"}
+	   ✔️  "ed350eca-393b-4643-8748-8d22b8a0e762"
+	   ✔️  2021/5/17 15:15:45
+
+}
+{
+	  level ⛔  ERROR
+	  message ⛔  {"name":"MongoNetworkError"}
+	   ✔️  "c3a03961-15c6-4da5-95f3-2b9b7498dcb2"
+	   ✔️  2021/5/17 15:22:4
+
+}
