@@ -21,9 +21,9 @@ application.set("views", path.join(__dirname, "views/pages/"));
 // set where to find static files like css imgs etc
 application.use(express.static(path.join(__dirname, "assets")));
 // render/serve Home Screen
-application.get("/", (req: Request, res: Response) => {
-  res.render(path.join("home.ejs"));
-});
+// application.get("/", (req: Request, res: Response) => {
+//   res.render(path.join("home.ejs"));
+// });
 // render/serve API Screen
 application.get("/apis", (req: Request, res: Response) => {
   res.render(path.join("apis.ejs"), { apis: apiList });
