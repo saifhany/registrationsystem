@@ -1,6 +1,6 @@
 import { lang } from "./enums";
-const ar = require("../localize/ar.json");
-const en = require("../localize/en.json");
+import * as  ar  from '../localize/ar.json';
+import * as en from '../localize/en.json';
 
 export class Localize {
   private static language: lang = lang.Arabic;
@@ -13,6 +13,7 @@ export class Localize {
       case lang.English:
         return en[text];
         break;
+
     }
   };
   public static localize = (lang: lang, text) => {
