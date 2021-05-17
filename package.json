@@ -2,9 +2,10 @@
   "name": "final-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
-    "node": "12.x"
+    "node": "15.x",
+    "npm": "7.x"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
