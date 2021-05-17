@@ -10,7 +10,7 @@ import * as bodyParser from "body-parser";
 // DB connection
 require("./utils/mongo.connection");
 // get backend class
-import { Backend } from "./Backend";
+import { Backend } from "./backend";
 // application object from express
 const application: express.Application = express();
 application.use(bodyParser.json());
