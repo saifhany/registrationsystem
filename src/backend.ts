@@ -8,6 +8,7 @@ import { ProfRouter } from './routers/prof.router';
 import { ProfController } from './controllers/prof.controller';
 import { ProfDao } from './dao/prof.dao';
 import { CourseDao } from './dao/course.dao';
+import { Env } from "./utils/env";
 
 export class Backend {
   application: express.Application;
@@ -33,7 +34,7 @@ export class Backend {
   // start backend
   start(PORT: number) {
     this.application.listen(PORT, () => {
-     Logy.log('debug',"server is up at http://localhost:" + PORT || 5000)
+     Logy.log('debug',`server is up at ${Env.NODE_ENV}` + PORT || 5000)
     });
   }
 }
