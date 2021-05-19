@@ -15,6 +15,8 @@ import { Backend } from "./backend";
 const application: express.Application = express();
 application.use(bodyParser.json());
 // use ejs as templete engine to render views files
+application.engine('html', require('ejs').renderFile);
+application.set('view engine', 'html');
 application.set("view engine", "ejs");
 // set the view path
 application.set("views", path.join(__dirname, "views/pages/"));
