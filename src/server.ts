@@ -23,12 +23,15 @@ application.set("views", path.join(__dirname, "views/pages/"));
 // set where to find static files like css imgs etc
 application.use(express.static(path.join(__dirname, "assets")));
 // render/serve Home Screen
-application.get("/", (req: Request, res: Response) => {
+application.get("/", (req: Request, res: Response, next) => {
   res.render(path.join("home.ejs"));
+  next()
 });
 // render/serve API Screen
-application.get("/apis", (req: Request, res: Response) => {
+application.get("/apis", (req: Request, res: Response,next) => {
+
   res.render(path.join("apis.ejs"), { apis: apiList });
+  next()
 });
 // secure header
 application.use(helmet());
