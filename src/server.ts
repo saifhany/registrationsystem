@@ -25,6 +25,7 @@ application.use(express.static(path.join(__dirname, "assets")));
 // render/serve Home Screen
 application.get("/", (req: Request, res: Response, next) => {
   res.render(path.join("home.ejs"));
+  
   next()
 });
 // render/serve API Screen
