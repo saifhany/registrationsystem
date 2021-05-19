@@ -37,7 +37,7 @@
   "scripts": {
     "build": "tsc",
     "start-dev": "nodemon ./src/server.ts",
-    "start": " node dist/server.js"
+    "start": "node dist/server.js"
   },
   "author": "",
   "license": "ISC"
