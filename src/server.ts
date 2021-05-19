@@ -15,25 +15,25 @@ import { Backend } from "./backend";
 const application: express.Application = express();
 application.use(bodyParser.json());
 // use ejs as templete engine to render views files
-application.engine('html', require('ejs').renderFile);
-application.set('view engine', 'html');
-application.set("view engine", "ejs");
+// application.engine('html', require('ejs').renderFile);
+// application.set('view engine', 'html');
+// application.set("view engine", "ejs");
 // set the view path
-application.set("views", path.join(__dirname, "views/pages/"));
+// application.set("views", path.join(__dirname, "views/pages/"));
 // set where to find static files like css imgs etc
-application.use(express.static(path.join(__dirname, "assets")));
+// application.use(express.static(path.join(__dirname, "assets")));
 // render/serve Home Screen
-application.get("/", (req: Request, res: Response, next) => {
-  res.render(path.join("home.ejs"));
+// application.get("/", (req: Request, res: Response, next) => {
+//   res.render(path.join("home.ejs"));
   
-  next()
-});
+//   next()
+// });
 // render/serve API Screen
-application.get("/apis", (req: Request, res: Response,next) => {
+// application.get("/apis", (req: Request, res: Response,next) => {
 
-  res.render(path.join("apis.ejs"), { apis: apiList });
-  next()
-});
+//   res.render(path.join("apis.ejs"), { apis: apiList });
+//   next()
+// });
 // secure header
 application.use(helmet());
 // comprss files such as asseets
@@ -45,31 +45,31 @@ const PORT: any = Env.PORT;
 // start back-end
 backend.start(PORT);
 
-const apiList = [
-  {
-    title: "Student",
-    apis: [
-      "student/login",
-      "student/logout",
-      "student/get-studets",
-      "student/create-student",
-      "student/add-course",
-      "student/drop-course",
-      "student/get-course",
-    ],
-  },
-  {
-    title: "Prof",
-    apis: [
-      "prof/login",
-      "prof/logout",
-      "prof/get-profs",
-      "prof/create-prof",
-      "prof/add-course",
-      "prof/drop-course",
-      "prof/get-course",
-      "prof/give-permission",
-      "prof/student-course",
-    ],
-  },
-];
+// const apiList = [
+//   {
+//     title: "Student",
+//     apis: [
+//       "student/login",
+//       "student/logout",
+//       "student/get-studets",
+//       "student/create-student",
+//       "student/add-course",
+//       "student/drop-course",
+//       "student/get-course",
+//     ],
+//   },
+//   {
+//     title: "Prof",
+//     apis: [
+//       "prof/login",
+//       "prof/logout",
+//       "prof/get-profs",
+//       "prof/create-prof",
+//       "prof/add-course",
+//       "prof/drop-course",
+//       "prof/get-course",
+//       "prof/give-permission",
+//       "prof/student-course",
+//     ],
+//   },
+// ];
